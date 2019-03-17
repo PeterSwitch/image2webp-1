@@ -5,7 +5,7 @@ set "FIND_STRING=function jpg2webp"
 
 Setlocal EnableDelayedExpansion
 set "CWEBP_LINE_DEQUOTED_JPG=cwebp -q "$1" "$file" -o img_folder/webp/`basename ${file%%.jpg}`.webp"
-set CWEBP_LINE_DEQUOTED_PNG="cwebp -lossless "$file" -o img_folder/webp/`basename ${file%%.png}`.webp"
+set CWEBP_LINE_DEQUOTED_PNG=cwebp -lossless "$file" -o img_folder/webp/`basename ${file%%.png}`.webp
 
 echo Looking for the JPG FUNCTION: %FIND_STRING% in %BASH_PATH_FILE%
 find /c "%FIND_STRING%" %BASH_PATH_FILE% 
